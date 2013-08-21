@@ -18,7 +18,7 @@ public class Entry {
         SocketInitiator socketInitiator = null;
         int tryCount = 0;
         try {
-            SessionSettings initiatorSettings = new SessionSettings("D:/imsi/GitHub/FProject/src/Eric/ClientSettings.txt");
+            SessionSettings initiatorSettings = new SessionSettings(new java.io.File("src/Eric/ClientSettings.txt").getAbsolutePath());
             Application initiatorApplication = new TradeClient();
             FileStoreFactory fileStoreFactory = new FileStoreFactory(initiatorSettings);
             FileLogFactory fileLogFactory = new FileLogFactory(initiatorSettings);

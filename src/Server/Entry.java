@@ -7,7 +7,7 @@ public class Entry {
 	public static void main(String[] args) {
         SocketAcceptor socketAcceptor = null;
         try {
-            SessionSettings executorSettings = new SessionSettings("D:/imsi/GitHub/FProject/src/Server/ServerSettings.txt");
+            SessionSettings executorSettings = new SessionSettings(new java.io.File("src/Server/ServerSettings.txt").getAbsolutePath());
             Application application = new TradeExecutor();
             FileStoreFactory fileStoreFactory = new FileStoreFactory(executorSettings);
             MessageFactory messageFactory = new DefaultMessageFactory();

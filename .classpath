@@ -9,5 +9,8 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="lib" path="D:/quickfixj/quickfixj-core-1.5.3.jar"/>
+	<classpathentry kind="lib" path="D:/quickfixj/lib/mina-core-1.1.7.jar"/>
+	<classpathentry kind="lib" path="D:/quickfixj/lib/slf4j-api-1.6.3.jar"/>
+	<classpathentry kind="lib" path="D:/quickfixj/lib/slf4j-jdk14-1.6.3.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

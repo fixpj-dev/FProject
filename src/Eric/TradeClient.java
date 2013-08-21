@@ -43,7 +43,16 @@ public class TradeClient extends MessageCracker implements Application {
      */
     @Override
     public void toAdmin(Message message, SessionID sessionId) {
- 
+    	System.out.println("Initiator ToAdmin Message:"+message+" "+"SessionID:"+sessionId);
+ 	   	String msgType=null;
+ 	   	try {
+ 		   msgType=message.getString(quickfix.field.MsgType.FIELD);
+ 	   	} catch (FieldNotFound e) {
+ 		   e.printStackTrace();
+ 	   	}
+ 	   	if(msgType==null){
+ 		   System.out.println("Message Type is null");
+ 	   	}
     }
  
     /** (non-Javadoc)
