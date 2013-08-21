@@ -1,7 +1,7 @@
 [DEFAULT]
 ConnectionType=acceptor
 ResetOnLogon=Y
-FileLogPath=D:\imsi\Ericj\logs
+FileLogPath=D:\imsi\GitHub\FProject\logs
 LogonTimeout=6000
 ReconnectInterval=6030
 
@@ -17,5 +17,5 @@ HeartBtInt=30
 CheckLatency=N
 SocketAcceptPort=12000
 UseDataDictionary=Y
-DataDictionary=D:\imsi\Ericj\datadictionary\FIX50.xml
-FileStorePath=D:\imsi\Ericj\sessioninfo
+DataDictionary=D:\imsi\GitHub\FProject\datadictionary\FIX50.xml
+FileStorePath=D:\imsi\GitHub\FProject\sessioninfo

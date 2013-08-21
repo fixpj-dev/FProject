@@ -3,7 +3,7 @@ ConnectionType=initiator
 LogonTimeout=30
 ReconnectInterval=5
 ResetOnLogon=Y
-FileLogPath=D:\imsi\Ericj\logs
+FileLogPath=D:\imsi\GitHub\FProject\logs
 
 [SESSION]
 BeginString=FIX.5.0
@@ -18,5 +18,5 @@ CheckLatency=N
 SocketConnectPort=12000
 SocketConnectHost=127.0.0.1
 UseDataDictionary=Y
-DataDictionary=D:\imsi\Ericj\datadictionary\FIX50.xml
-FileStorePath=D:\imsi\Ericj\sessioninfo
+DataDictionary=D:\imsi\GitHub\FProject\datadictionary\FIX50.xml
+FileStorePath=D:\imsi\GitHub\FProject\sessioninfo

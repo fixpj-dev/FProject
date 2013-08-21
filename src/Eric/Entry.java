@@ -16,8 +16,9 @@ import quickfix.fix50.NewOrderSingle;
 public class Entry {
 	public static void main(String[] args) {
         SocketInitiator socketInitiator = null;
+        int tryCount = 0;
         try {
-            SessionSettings initiatorSettings = new SessionSettings("D:/imsi/Ericj/src/Eric/ClientSettings.txt");
+            SessionSettings initiatorSettings = new SessionSettings("D:/imsi/GitHub/FProject/src/Eric/ClientSettings.txt");
             Application initiatorApplication = new TradeClient();
             FileStoreFactory fileStoreFactory = new FileStoreFactory(initiatorSettings);
             FileLogFactory fileLogFactory = new FileLogFactory(initiatorSettings);
@@ -27,11 +28,16 @@ public class Entry {
             SessionID sessionId = socketInitiator.getSessions().get(0);
             Session.lookupSession(sessionId).logon();
             while(!Session.lookupSession(sessionId).isLoggedOn()){
+            	tryCount++;
                 System.out.println("Waiting for login success");
                 Thread.sleep(3000);
+                if(tryCount == 3){
+                	socketInitiator.stop();
+                	System.exit(0);
+                	break;
+                }
             }
             System.out.println("Logged In...");
-             
             Thread.sleep(5000);
             bookSingleOrder(sessionId);
              
