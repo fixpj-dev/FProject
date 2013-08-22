@@ -28,6 +28,7 @@ public class Entry {
             SessionID sessionId = socketInitiator.getSessions().get(0);
             Session.lookupSession(sessionId).logon();
             while(!Session.lookupSession(sessionId).isLoggedOn()){
+            	initiatorApplication.onLogon( sessionId );
             	tryCount++;
                 System.out.println("Waiting for login success");
                 Thread.sleep(3000);

@@ -22,7 +22,7 @@ public class Entry {
             }
             
         } catch (ConfigError e) {
-            e.printStackTrace();
+        	System.out.println(e.getMessage());
         }
     }
 }
